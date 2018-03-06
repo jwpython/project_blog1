@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>姜伟的博客</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
+</head>
+<body>
+<div id="layout" class="pure-g">
+     <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title"><a href="{% url 'blog_app_home' %}"></a>Mark Jiang Blog</h1>
+            <h2 class="brand-tagline">姜伟 - Mark Jiang</h2>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/">归档</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-error pure-button" href="/">微博</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/">专题</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/">关于我</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            {% block content %}
+            {% endblock %}
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                    <ul>
+                        <li><a href="/">关于我</a></li>
+                        <li><a href="/">微博</a></li>
+                        <li><a href="/">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
